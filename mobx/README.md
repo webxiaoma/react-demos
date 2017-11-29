@@ -1,5 +1,7 @@
 # mobx 练习
 
+![webxiaoma](https://webxiaoma.github.io/other/manong.jpg)
+
 ### 使用方式
 
 ```
