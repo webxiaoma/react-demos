@@ -13,10 +13,11 @@ yarn start
 
 ### 知识点 
 
-mobx中文文档:[http://cn.mobx.js.org/](http://cn.mobx.js.org/)
-mobx GitHub:[https://github.com/mobxjs/mobx](https://github.com/mobxjs/mobx)
+- mobx中文文档:[http://cn.mobx.js.org/](http://cn.mobx.js.org/)
 
-mobx-react GitHub:[https://github.com/mobxjs/mobx-react](https://github.com/mobxjs/mobx-react)
+- mobx GitHub:[https://github.com/mobxjs/mobx](https://github.com/mobxjs/mobx)
+
+- mobx-react GitHub:[https://github.com/mobxjs/mobx-react](https://github.com/mobxjs/mobx-react)
 
 
 
