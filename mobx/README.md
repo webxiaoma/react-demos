@@ -8,7 +8,7 @@ yarn install
 yarn start
 ```
 
-
+了解mobx的用法，建议你只关注 src文件夹下的mobx文件和 `app.js文件`
 
 
 ### 知识点 
