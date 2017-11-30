@@ -13,9 +13,9 @@ yarn start
 
 说明：
 
-- one 文件夹是redux（同步，包括react-redux） 练习
+- one 文件夹是redux (包括react-redux） 同步练习 (文件件内有 README.md 说明)
 
-- two 文件夹是redux 异步练习
+- two 文件夹是redux 使用` redux-thunk` 中间件的异步练习 (文件件内有 README.md 说明)
 
 
 
