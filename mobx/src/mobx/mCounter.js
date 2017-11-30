@@ -38,7 +38,6 @@ class Mcounter extends React.Component{
                 <button onClick={()=>this.props.stores.add()}>增加</button>
                 <button onClick={()=>this.props.stores.decrease()}>减少</button>
                 <button onClick={()=>this.props.stores.asyncAdd()}>异步增加操作</button>
-                
              </Show> 
           </div>
         )

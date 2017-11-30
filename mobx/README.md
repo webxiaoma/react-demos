@@ -9,17 +9,18 @@ yarn install
 
 yarn start
 ```
+说明：这里我们使用的是feackbook官方提供的 `create-react-app` 脚手架 [github仓库](https://github.com/facebookincubator/create-react-app)
 
 了解mobx的用法，建议你只关注 src文件夹下的mobx文件和 `app.js文件`
 
 
 ### 知识点 
 
-- mobx中文文档:[http://cn.mobx.js.org/](http://cn.mobx.js.org/)
+- mobx中文文档: [http://cn.mobx.js.org/](http://cn.mobx.js.org/)
 
-- mobx GitHub:[https://github.com/mobxjs/mobx](https://github.com/mobxjs/mobx)
+- mobx GitHub仓库: [https://github.com/mobxjs/mobx](https://github.com/mobxjs/mobx)
 
-- mobx-react GitHub:[https://github.com/mobxjs/mobx-react](https://github.com/mobxjs/mobx-react)
+- mobx-react GitHub仓库: [https://github.com/mobxjs/mobx-react](https://github.com/mobxjs/mobx-react)
 
 
 
