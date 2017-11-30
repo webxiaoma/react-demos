@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 
-import {count} from './actions'
+import {countOne} from './actions'
 import Show from './show'
 import NavBar from '../router' // 路由
 
@@ -12,7 +12,7 @@ class Count extends Component{
         return(
          <NavBar>
             <div>
-                <h2>简易计算器 （同步）</h2> 
+                <h2>简易计算器 （redux 同步）</h2> 
                 <Show result={this.props.result}>  
                     <button onClick={()=>this.props.add()}>增加</button>
                     <button onClick={()=>this.props.decrease()}>减少</button>
@@ -26,7 +26,7 @@ class Count extends Component{
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        result: state.result
+        result: state.oneReducer.result
     }
 }
 
@@ -34,10 +34,10 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         add: () => {
-            dispatch(count.add)
+            dispatch(countOne.add)
         },
         decrease:() =>{
-            dispatch(count.decrease)
+            dispatch(countOne.decrease)
         },
     }
 }

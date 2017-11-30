@@ -38,7 +38,7 @@ yarn start
 
 ### 了解redux
 
- **这里的描述来自知乎Wang Namelos用户的回答 [何通俗易懂的理解 Redux](https://www.zhihu.com/question/41312576/answer/90782136)**
+ **这里的描述来自知乎Wang Namelos用户的回答 [何通俗易懂的理解 Redux](https://www.zhihu.com/question/41312576/answer/90782136)**另外我又加了一点东西
 
 
 1. `React`有`props`和`state`: `props`意味着父级分发下来的属性，`state`意味着组件内部可以自行管理的状态，并且整个`React`没有数据向上回溯的能力，也就是说数据只能单向向下分发，或者自行内部消化。理解这个是理解`React`和`Redux`的前提。
@@ -77,6 +77,12 @@ yarn start
  `mapDispatchToProps`：声明好的`action`作为回调，也可以被注入到组件里，就是通过这个函数，它的参数是`dispatch`，通过`redux`的辅助方法`bindActionCreator`绑定所有`action`以及参数的`dispatch`，就可以作为属性在组件里面作为函数简单使用了，不需要手动`dispatch`。这个`mapDispatchToProps`是可选的，如果不传这个参数`redux`会简单把`dispatch`作为属性注入给组件，可以手动当做`store.dispatch`使用。这也是为什么要科里化的原因。做好以上流程`Redux`和`React`就可以工作了。
 
  
+**中间件applyMiddleware**
+
+在处理异步的时候，不能直接处理，我们需要使用`applyMiddleware` 方法引入中间件来实现。比如`redux-thunk` 中间件，引入之后`action` 创建函数除了返回 `action` 对象外还可以返回函数。这时，这个 `action` 创建函数就成为了 thunk。我们就可以在函数里进行异步请求或操作了，
+
+
+
  >注：根据定义来说，柯里化就是将一个接收“多个”参数的函数拆分成一个或者许多个接收“单一”参数的函数
 
  ```
