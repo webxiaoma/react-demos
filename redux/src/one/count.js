@@ -24,14 +24,16 @@ class Count extends Component{
 }
 
 
-const mapStateToProps = (state, ownProps) => {
+//  处理 展示组件，生成容器组件
+
+const mapStateToProps = (state, ownProps) => { // 处理state
     return {
         result: state.oneReducer.result
     }
 }
 
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch, ownProps) => { // 方法
     return {
         add: () => {
             dispatch(countOne.add)
@@ -46,5 +48,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 // 将数据传给展示组件， 导出容器组件
 export default  connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps // 该参数不是必须的
 )(Count)

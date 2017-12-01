@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom'
 import {combineReducers,createStore,applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 // Provider 组件可以将stores 中的数据分发给其下的所有组件
@@ -11,8 +11,8 @@ import Countone from './one/count'
 import Counttwo from './two/count'
 
 // 引入拆分的reducer
-import oneReducer from './one/reducer'
-import twoReducer from './two/reducer'
+import oneReducer from './one/reducer' // one 文件的reducer
+import twoReducer from './two/reducer' // two 文件的reducer
 
 // 合并拆分的reducer
 const reducer = combineReducers({oneReducer,twoReducer})
@@ -20,7 +20,7 @@ const reducer = combineReducers({oneReducer,twoReducer})
 // 将reducer 传入store
 const  Stores = createStore(
   reducer,
-  applyMiddleware(thunk) // 使用中间件thunk 来处理 异步操作
+  applyMiddleware(thunk) // 使用中间件thunk 来处理 异步操作 two文件用到
 );
 
 // 每次 state 更新时，打印日志
@@ -61,6 +61,7 @@ class App extends Component {
               <Switch>
                   <Route path='/reudx_one' component={Countone}/>    
                   <Route path='/reudx_two' component={Counttwo}/>    
+                  <Route path='/' render={() => <Redirect to="/reudx_one"/>}/>
               </Switch>
             </BrowserRouter>
           </Provider>

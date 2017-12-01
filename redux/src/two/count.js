@@ -30,7 +30,7 @@ class Count extends Component{
 }
 
 
-// 将state中的数据传给展示组件， 导出容器组件
+// 将state中的数据传给展示组件， 生成容器组件
 export default  connect(
    state => ({result: state.twoReducer.result})
 )(Count)
