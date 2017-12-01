@@ -12,5 +12,10 @@ const twoActions = {
     COUNT_SUB_ADD:'COUNT_SUB_ADD'  // 异步调用
 }
 
+const sagaActions = {
+    COUNT_ADD:'SAGA_COUNT_ADD',
+    COUNT_DECREASE:'SAGA_COUNT_DECREASE',
+    COUNT_SUB_ADD:'SAGA_COUNT_SUB_ADD'  // 异步调用
+}
 
-export {oneActions,twoActions}
+export {oneActions,twoActions,sagaActions}

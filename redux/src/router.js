@@ -12,7 +12,7 @@ class Nav extends React.Component{
 		    <div className='nav-bar'>
 		      <Link to='/reudx_one'>reudx</Link>
 		      <Link to='/reudx_two'>异步redux-thunk</Link>
-		      <Link to='/reudx_three'>异步redux-sag</Link>
+		      <Link to='/reudx_three'>异步redux-saga</Link>
 		    </div>
 		)
 	}
