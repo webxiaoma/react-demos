@@ -26,8 +26,6 @@ const reducer = combineReducers({oneReducer,twoReducer,sagaReducer})
 // 创建saga中间并件sagas传入
 const SagaMiddleware = createSagaMiddleware(sagas);
 
-console.log(SagaMiddleware)
-
 // 将reducer 传入store
 const  Stores = createStore(
   reducer,
@@ -38,6 +36,7 @@ const  Stores = createStore(
 let unsubscribe = Stores.subscribe(() =>
    console.log('数据更新了：',Stores.getState())
 )
+
 
 /*
 上边state结构：

@@ -10,6 +10,7 @@ import NavBar from '../router' // 路由
 class Count extends Component{
     render(){
         const {dispatch} = this.props;
+        console.log(this.props)
         return(
          <NavBar>
             <div>

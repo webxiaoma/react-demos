@@ -13,13 +13,8 @@ function* decrease(){
 
 
 
-function* watch(){
-    yield*  takeEvery('ADD', add)
-
-}
-
-export default function* root () {
+export default function* rootSaga() {
     yield [
-        watch()
+        takeEvery('ADD', add),
     ]
   }
