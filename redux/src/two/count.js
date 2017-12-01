@@ -7,7 +7,6 @@ import Show from './show'
 import NavBar from '../router' // 路由
 
 
-
 class Count extends Component{
     render(){
         const { result, dispatch } = this.props;
@@ -17,7 +16,7 @@ class Count extends Component{
         return(
          <NavBar>
             <div>
-                <h2>简易计算器 （redux 异步使用中间件 redux-think）</h2> 
+                <h2>简易计算器 （redux 异步使用中间件 redux-thunk）</h2> 
                 <Show result={result}>  
                     <button onClick={()=>bindActionCreator.add()}>增加</button>
                     <button onClick={()=>bindActionCreator.decrease()}>减少</button>
@@ -34,3 +33,4 @@ class Count extends Component{
 export default  connect(
    state => ({result: state.twoReducer.result})
 )(Count)
+
