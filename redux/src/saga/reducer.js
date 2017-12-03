@@ -8,6 +8,8 @@ export default function oneCounter(state = {result:0},action){
           return {result: count +1}
         case sagaActions.COUNT_DECREASE:
           return {result: count -1}
+        case sagaActions.COUNT_SUB_ADD:
+          return {result: count + action.payLoad}
         default:
           return state
     }
