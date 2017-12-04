@@ -41,4 +41,4 @@
 
 另外我们是通过`applyMiddleware`方法来将`redux-thunk` 中间件导入到`store`中的（App.js）。
 
-
+说白了，redux-thunk 主要是处理的 action创建函数, 将action创建函数可以返回函数对象，并且可以处理副作用（异步操作） 
