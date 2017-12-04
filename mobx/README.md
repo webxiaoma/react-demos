@@ -22,7 +22,9 @@ yarn start
 
 - mobx-react GitHub仓库: [https://github.com/mobxjs/mobx-react](https://github.com/mobxjs/mobx-react)
 
+- Mobx入门教程：[https://github.com/sorrycc/blog/issues/2](https://github.com/sorrycc/blog/issues/2)
 
+- Mobx原理：[https://github.com/sorrycc/blog/issues/3](https://github.com/sorrycc/blog/issues/3)
 
 
 
