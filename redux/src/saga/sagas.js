@@ -14,6 +14,7 @@ function* decrease(){
 
 
 export default function* rootSaga() {
+    console.log(0)
     yield [
         takeEvery('ADD', add),
     ]
