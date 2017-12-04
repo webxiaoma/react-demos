@@ -18,7 +18,11 @@ class Count extends Component{
                 <Show result={this.props.result}>  
                     <button onClick={()=>dispatch({type:'ADD'})}>增加</button>
                     <button onClick={()=>dispatch({type:'DECTEASE'})}>减少</button>
-                    <button onClick={()=>dispatch({type:'ASYNC_DECTEASE'})}>异步加2</button>
+                    <button onClick={()=>dispatch({type:'ASYNC_DECTEASE'})}>延迟1秒加2</button>
+                    <p>
+                       <button onClick={()=>dispatch({type:'TAKE_ADD'})}>先点击我，在点击右边按钮,才会加3</button>
+                       <button onClick={()=>dispatch({type:'TAKE_SUCCESS'})}>先点击左边按钮，在点击我，才会加3</button>
+                    </p>
                 </Show> 
             </div>
          </NavBar>

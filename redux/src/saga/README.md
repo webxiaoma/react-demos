@@ -22,11 +22,11 @@
 >[react-redux](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html)
 
 
-**5.redux-thunk中间件**[传送门](https://github.com/gaearon/redux-thunk)
+**5.redux-saga中间件**[传送门](http://leonshi.com/redux-saga-in-chinese/docs/introduction/index.html)
 
-对于 `redux-thunk` 中间件 这里有一些通俗易懂的使用文章：
+对于 `redux-saga` 中间件 这里有一些通俗易懂的使用文章：
 
-[http://blog.csdn.net/kuangshp128/article/details/67632683](http://blog.csdn.net/kuangshp128/article/details/67632683)
+[https://segmentfault.com/a/1190000007261052?_ea=1290634](https://segmentfault.com/a/1190000007261052?_ea=1290634)
 
 
 ### 项目介绍

@@ -40,3 +40,5 @@
 `actions` 中我们使用的`action`创建函。用`bindActionCreators`将拆分的创建函数合并，在`action`创建函数中我们因为使用了`reudx-thunk`中间件，所以可以返回一个函数对象，而不是必须返回一个对象了，我们在函数里可以处理异步操作。异步操作完成是，我们可以在通过`dispatch` 来分发一个`action`去通知`reducer`改变`state`。
 
 另外我们是通过`applyMiddleware`方法来将`redux-thunk` 中间件导入到`store`中的（App.js）。
+
+
