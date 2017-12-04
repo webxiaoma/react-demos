@@ -32,9 +32,7 @@ const  Stores = createStore(
   applyMiddleware(thunk,SagaMiddleware) // 使用中间件thunk 来处理 异步操作 two文件用到
 );
 
-
 SagaMiddleware.run(sagas)
-
 
 // 每次 state 更新时，打印日志
 // 注意 subscribe() 返回一个函数用来注销监听器

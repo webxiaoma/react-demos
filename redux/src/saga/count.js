@@ -17,7 +17,8 @@ class Count extends Component{
                 <h2>简易计算器 （redux 异步redux-saga）</h2> 
                 <Show result={this.props.result}>  
                     <button onClick={()=>dispatch({type:'ADD'})}>增加</button>
-                    <button onClick={()=>this.props.decrease()}>减少</button>
+                    <button onClick={()=>dispatch({type:'DECTEASE'})}>减少</button>
+                    <button onClick={()=>dispatch({type:'ASYNC_DECTEASE'})}>异步加2</button>
                 </Show> 
             </div>
          </NavBar>
