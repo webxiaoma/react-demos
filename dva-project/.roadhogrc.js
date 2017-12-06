@@ -1,5 +1,12 @@
-{
+export default{
   "entry": "src/index.js",
+  // "proxy": {
+  //     "/api": {
+  //       "target": "http://jsonplaceholder.typicode.com/",
+  //       "changeOrigin": true,
+  //       "pathRewrite": { "^/api" : "" }
+  //     }
+  // },
   "env": {
     "development": {
       "extraBabelPlugins": [

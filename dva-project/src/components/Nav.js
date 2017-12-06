@@ -8,6 +8,7 @@ export default () => {
         <div className={style.navBar}>
             <Link to='/one'>同步变化</Link>
             <Link to='/two'>异步变化</Link>
+            <Link to='/mock'>Mock数据模拟</Link>
         </div>
     )
 }

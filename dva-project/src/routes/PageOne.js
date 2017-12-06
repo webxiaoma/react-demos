@@ -6,7 +6,7 @@ import style from './Page.less'
 import MainLayout from '../components/MainLayout'
 
 function Pageone(prop){
-  console.log(prop)
+  // console.log(prop)
   const {dispatch,PageOne} = prop;
   return (
     <MainLayout>

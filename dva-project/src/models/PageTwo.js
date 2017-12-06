@@ -21,7 +21,7 @@ export default modelExtends(commonModel,{
         })
         // select 可以根据namespace，获取 store里的相对应的model中的state数据
         const newResultOne = yield select(store=>store.PageTwo)  
-        console.log(newResultOne)
+        // console.log(newResultOne)
         yield put({ type: 'updateState', payload:{result:newResultOne.result + sumOne} });
       },
       *asyncDecrease({ payload },{ call, put, select }){

@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Spin } from 'antd'; // 加载动画
 
 import style from './Page.less'
 
 import MainLayout from '../components/MainLayout'
 
-function Pageone(prop){
-  console.log(prop)
-  const {dispatch,PageTwo} = prop;
+function Pageone( {dispatch,PageTwo,loading} ){
+  console.log(loading)
   return (
     <MainLayout>
        <div className={style.warp}>
           <h2 className={style.warpa}>简易计算器 <strong>异步操作（延迟一秒）</strong>（dav脚手架）</h2> 
-          <h4>计算结果：{PageTwo.result}</h4>
+          <h4>计算结果：<span>{PageTwo.result}</span> <Spin size="large" spinning={loading.effects['PageTwo/asyncAdd']}/></h4>
           <div>
             <button onClick={()=>dispatch({type:'PageTwo/asyncAdd'})}>增加</button>
             <button onClick={()=>dispatch({type:'PageTwo/asyncDecrease'})}>减少</button>
@@ -28,4 +28,5 @@ Pageone.propTypes = {
 
 };
 
-export default connect(({PageTwo})=>({PageTwo}))(Pageone);
+// PageOne 是module中对应的数据， loading是一个dva-loading插件，在index页面中引入的
+export default connect(({PageTwo,loading})=>({PageTwo,loading}))(Pageone);
