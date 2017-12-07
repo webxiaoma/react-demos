@@ -16,6 +16,7 @@
     "dva-loading": "^1.0.4",
     "dva-model-extend": "^0.1.2",
     "keymaster": "^1.6.2",
+    "query-string": "^5.0.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
   },

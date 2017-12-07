@@ -24,18 +24,15 @@ class FromComponent extends React.Component {
             <Form layout="inline" onSubmit={this.handleSubmit}>
                 <Form.Item>
                     {getFieldDecorator('id', {
-                        rules: [{ required: true, message: '请输入1-10整数'}],
+                        rules: [{ required: true,  len:1, message: '请输入0-9整数'}],
                     })(
-                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="请输入1-10整数" />
+                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="number" placeholder="请输入1-10整数" />
                     )}
                 </Form.Item>
                 <Form.Item>
-                <Button
-                    type="primary"
-                    htmlType="submit"
-                >
-                    搜索
-                </Button>
+                    <Button type="primary" htmlType="submit">
+                       搜索
+                    </Button>                 
                 </Form.Item>
             </Form>
         )
@@ -48,7 +45,8 @@ const NewFromComponent = Form.create()(FromComponent);
 
 
 const Mock = ({mockTest,dispatch}) => {
-    console.log(mockTest)
+    const result = mockTest.result;
+    // console.log(result)    
     return(
         <MainLayout>
         <div className={style.warp}>
@@ -57,7 +55,13 @@ const Mock = ({mockTest,dispatch}) => {
             <div>
                 <NewFromComponent submit={(value)=>dispatch({type:'mockTest/fetch',payload: value})} />
             </div>
-            <h4>获取结果：{mockTest.result}</h4>          
+            <h4>获取结果：</h4>         
+            <div>
+               <p><strong>姓名：</strong>{result.name[Object.keys(result.name)[0]] || ""}</p>
+               <p><strong>序列号：</strong>{result.id}</p>
+               <p><strong>是否已婚：</strong>{result.isMarried?"是":'否'}</p>
+               <p><strong>其他信息：</strong>{result.other.last}</p>
+            </div> 
         </div>
         </MainLayout>
     )

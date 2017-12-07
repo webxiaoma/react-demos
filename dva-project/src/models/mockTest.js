@@ -1,7 +1,7 @@
 import modelExtends from 'dva-model-extend' // 合并对象
 import {commonModel} from './model'
 
-import {query} from '../services/mock'
+import {reqPost,reqGet} from '../services/mock'
 
 export default modelExtends(commonModel,{
     namespace: 'mockTest', 
@@ -10,13 +10,23 @@ export default modelExtends(commonModel,{
       result:{
         id:'',
         isMarried:'',
+        name:'',
+        other:{
+          first:'',
+          middle:'',
+          last:'',
+        } 
       },
     },
     effects: {
       *fetch({payload},{call,put}){
-         const value = yield call(query,payload);
-         console.log(value.data.data.list[0].name)
-        //  yield put({type: 'updateState', payload:{result:value.data.data}})
+
+         const value = yield call(reqPost,payload);  // post 请求
+        //  const value = yield call(reqGet,payload);  // get 请求
+        //  console.log(value)
+         if(value.data.success){
+            yield put({type: 'updateState', payload:{result:value.data.newData}})
+         }
       }
     }
   })

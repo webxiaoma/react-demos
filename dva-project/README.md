@@ -14,13 +14,14 @@ npm start
 ```
 
 ```javascript
+—— mock // 模拟假数据
 —— src
    -- assets  // 静态资源存放文件（一般放背景图片，svg图片等）
    -- components // 公共模块
    -- models   // models 数据
    -- routes   // 页面模块
-   -- services  // 请求后台的方法和API等 （本练习没有用到）
-   -- utils    //  请求后台的封装  （本练习没有用到）
+   -- services  // 请求后台的方法和API等 
+   -- utils    //  请求后台的封装（如理由fetch 对post和get方法进行封装） 
    index.js   // dva 的一些配置
    router.js  // router 配置
 
@@ -45,6 +46,8 @@ npm start
 
  
  **mock.js数据模拟的使用** [传送门1](https://github.com/nuysoft/Mock/wiki/Getting-Started)  [传送门2](http://mockjs.com/)
+
+ **fetch交互的使用** [传送门](https://github.com/github/fetch#html)
  
 ### 关于项目我想说的
 
@@ -70,9 +73,12 @@ loading:{
 
 4. `.roadhogrc` 配置文件，因为个人不喜欢`json`格式，在编辑器上没有样式，所以改成了`js`文件`.roadhogrc.js`
 
-5. 关于代理的测试，我在`.roadhogrc.js` 注释了，你尝试可以打开注释，重新运行，然后在访问 [http://localhost:8000/api/users](http://localhost:8000/api/users) 注意端口可能有变化，根据你实际运行的端口
+5. 关于代理的测试，我在`.roadhogrc.js` 注释了，你尝试可以打开注释，重新运行，然后在访问 [http://localhost:8000/api/users](http://localhost:8000/api/users) **注意端口可能有变化**，根据你实际运行的端口
 
 
+### mock模拟数据
+
+我们在mock文件夹下写了test假数据，并写了一些相应get和post的方法，数据的书写规范请看：[传送门](https://github.com/nuysoft/Mock/wiki/Getting-Started)，另外我们在.roadhogrc.mock.js 文件中导入了我们要写的数据，这里的相关知识可以看看 [roadhog相关配置](https://github.com/sorrycc/roadhog#mock)
 
 
 
